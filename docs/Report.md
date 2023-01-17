@@ -11,9 +11,7 @@
    <summary>Report</summary>
    
    ![image](https://user-images.githubusercontent.com/110032141/212689313-81bf5f62-d69c-4838-8f15-7bd60a7e29ad.png)
-   
    ![image](https://user-images.githubusercontent.com/110032141/212689834-a8a1bd46-7694-4032-bcbe-aea7d8050097.png)
-   
    ![image](https://user-images.githubusercontent.com/110032141/212691569-9fc242c8-7b23-496a-8cf1-766282594f62.png)
 </details>
 
@@ -24,18 +22,16 @@
    <summary>Report</summary>
    
    ![image](https://user-images.githubusercontent.com/110032141/212693223-77c93def-db26-48e7-b921-3bd2ec0edfbb.png)
-   
    ![image](https://user-images.githubusercontent.com/110032141/212693456-810f5da8-a7ea-46d6-8c4c-390e70f53c0f.png)
-   
    ![image](https://user-images.githubusercontent.com/110032141/212693565-2d705e2a-9e90-4efc-a7fe-074d61661bc9.png)
 </details>
 
 ## Общие рекомендации
 1. Исправить орфографические ошибки ([Ошибка в слове Марракеш](https://github.com/ripodgor/QA46_Diploma/issues/1))
-2. Исправить визуальные ошибки ([Ошибка в названии вкладки]()) 
-3. Исправить цвет кнопки "Купить" и "Купить в кредит", чтобы при нажатии они меняли цвет ([Красный - активная вкладка, белый - неактивная]()).
+2. Исправить визуальные ошибки ([Ошибка в названии вкладки](https://github.com/ripodgor/QA46_Diploma/issues/5)) 
+3. Исправить цвет кнопки "Купить" и "Купить в кредит", чтобы при нажатии они меняли цвет ([Красный - активная вкладка, белый - неактивная](https://github.com/ripodgor/QA46_Diploma/issues/4)).
 3. Исправить дефекты связанные с неверными сообщениями об ошибках.
 4. Для поля "Владелец" ввести ограничение на вводимые символы - только английские буквы, нечувствительные к регистру.
 5. Сделать кнопку "Продолжить" неактивной, если есть пустые и/или неправильно заполненные поля.
 
-**Полный список найденных дефектов находится в [Issues]()**
+**Полный список найденных дефектов находится в [Issues](https://github.com/ripodgor/QA46_Diploma/issues)**
