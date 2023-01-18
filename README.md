@@ -1,5 +1,4 @@
 [![Build status](https://ci.appveyor.com/api/projects/status/49cf1tebm5tfytxq/branch/main?svg=true)](https://ci.appveyor.com/project/ripodgor/qa46-diploma/branch/main)
-
 # Дипломный проект по профессии «Тестировщик»
 
 Дипломный проект — автоматизация тестирования комплексного сервиса, взаимодействующего с СУБД и API Банка.
