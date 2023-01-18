@@ -109,7 +109,7 @@ public class PaymentCardTest {
         var payForm = pageMain.payByDebitCard();
         var invalidYear = DataHelper.getInvalidYearInfo();
         payForm.fillFormNoSendRequest(invalidYear);
-        payForm.checkInvalidExpirationDate();
+        payForm.checkCardExpired();
     }
 
     @Test

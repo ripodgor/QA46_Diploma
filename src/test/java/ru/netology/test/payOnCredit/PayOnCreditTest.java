@@ -109,7 +109,7 @@ public class PayOnCreditTest {
         var payForm = pageMain.payCreditByCard();
         var invalidYear = DataHelper.getInvalidYearInfo();
         payForm.fillFormNoSendRequest(invalidYear);
-        payForm.checkInvalidExpirationDate();
+        payForm.checkCardExpired();
     }
 
     @Test
