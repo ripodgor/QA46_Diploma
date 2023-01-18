@@ -5,25 +5,24 @@
 ## Статистика успешных/неуспешных кейсов
 
 ### При подключении к БД MySQL
-* Успешных кейсов 46.15% (12 кейсов)
-* Неуспешных кейсов 53.84% (14 кейсов)
+* Успешных кейсов 53.84% (14 кейсов)
+* Неуспешных кейсов 46.16% (12 кейсов)
 <details>
    <summary>Report</summary>
    
-   ![image](https://user-images.githubusercontent.com/110032141/212689313-81bf5f62-d69c-4838-8f15-7bd60a7e29ad.png)
-   ![image](https://user-images.githubusercontent.com/110032141/212689834-a8a1bd46-7694-4032-bcbe-aea7d8050097.png)
-   ![image](https://user-images.githubusercontent.com/110032141/212691569-9fc242c8-7b23-496a-8cf1-766282594f62.png)
+   ![image](https://user-images.githubusercontent.com/110032141/213184207-64fb0b83-c0ea-426a-93bc-3fd572df0fe4.png)
+   ![image](https://user-images.githubusercontent.com/110032141/213184499-c3281a79-4a0e-467d-8093-a94718aa0b52.png)
 </details>
 
 ### При подключении к БД PostgreSQL
- * Успешных кейсов 46.15% (12 кейсов)
- * Неуспешных кейсов 53.84% (14 кейсов)
+ * Успешных кейсов 53.84% (14 кейсов)
+ * Неуспешных кейсов 46.16% (12 кейсов)
 <details>
    <summary>Report</summary>
    
-   ![image](https://user-images.githubusercontent.com/110032141/212693223-77c93def-db26-48e7-b921-3bd2ec0edfbb.png)
-   ![image](https://user-images.githubusercontent.com/110032141/212693456-810f5da8-a7ea-46d6-8c4c-390e70f53c0f.png)
-   ![image](https://user-images.githubusercontent.com/110032141/212693565-2d705e2a-9e90-4efc-a7fe-074d61661bc9.png)
+   ![image](https://user-images.githubusercontent.com/110032141/213186041-385fce40-f986-4d0f-9308-b836a5957728.png)
+   ![image](https://user-images.githubusercontent.com/110032141/213186186-cece84a9-6e71-40e4-849f-5a4f3155c862.png)
+
 </details>
 
 ## Общие рекомендации
