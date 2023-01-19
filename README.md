@@ -1,5 +1,4 @@
-[![Build status](https://ci.appveyor.com/api/projects/status/49cf1tebm5tfytxq/branch/main?svg=true)](https://ci.appveyor.com/project/ripodgor/qa46-diploma/branch/main)
-# Дипломный проект по профессии «Тестировщик»
+# Дипломный проект по профессии «Тестировщик» [![Build status](https://ci.appveyor.com/api/projects/status/49cf1tebm5tfytxq/branch/main?svg=true)](https://ci.appveyor.com/project/ripodgor/qa46-diploma/branch/main) 
 
 Дипломный проект — автоматизация тестирования комплексного сервиса, взаимодействующего с СУБД и API Банка.
 
@@ -20,7 +19,7 @@
 *Предусловия:*
 1. Необходимо склонировать репозиторий или скачать архив по [ссылке](https://github.com/ripodgor/QA46_Diploma). Или воспользоваться VCS Git, встроенной в
    IntelliJ IDEA.
-2. Установить и запустить Docker Desktop. Это можно сделать [здесь](https://docs.docker.com/get-docker/) в зависимости от операционной системы. Дополнительные инструкции по установке Docker [ссылке](https://github.com/netology-code/aqa-homeworks/blob/master/docker/installation.md)
+2. Установить и запустить Docker Desktop. Это можно сделать [здесь](https://docs.docker.com/get-docker/) в зависимости от операционной системы. [Дополнительные инструкции по установке Docker](https://github.com/netology-code/aqa-homeworks/blob/master/docker/installation.md)
 3. Открыть проект в IntelliJ IDEA
 
 ### Запуск
