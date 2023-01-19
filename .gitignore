@@ -38,6 +38,7 @@ out/
 *.zip
 *.tar.gz
 *.rar
+*.config
 
 ### Exclusions ###
 !gradle/wrapper/gradle-wrapper.jar
