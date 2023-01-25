@@ -4,7 +4,6 @@ import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import ru.netology.data.ApiUtils;
 import ru.netology.data.DataGenerator;
@@ -22,11 +21,6 @@ public class ApiTest {
     @AfterAll
     static void tearDownAll() {
         SelenideLogger.removeListener("allure");
-    }
-
-    @BeforeEach
-    public void setUp() {
-        DbUtils.clearDb();
     }
 
     @Test

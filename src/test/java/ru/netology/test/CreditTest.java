@@ -29,7 +29,6 @@ public class CreditTest {
     @BeforeEach
     public void setUp() {
         open("http://localhost:8080");
-        DbUtils.clearDb();
     }
 
     // Позитивные сценарии

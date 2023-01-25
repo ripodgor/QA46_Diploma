@@ -1,47 +1,38 @@
 package ru.netology.data;
 
-import lombok.SneakyThrows;
 import org.apache.commons.dbutils.QueryRunner;
-import org.apache.commons.dbutils.handlers.ScalarHandler;
+import org.apache.commons.dbutils.handlers.BeanHandler;
+import ru.netology.models.PaymentRequest;
 
+import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.SQLException;
 
 public class DbUtils {
-    public DbUtils() {
-    }
+    private static final String URL = System.getProperty("db.url");
+    private static final String USERNAME = System.getProperty("db.username");
+    private static final String PASSWORD = System.getProperty("db.password");
+    private static Connection connect;
 
-    @SneakyThrows
-    public static void clearDb() {
-        var paymentSQL = "DELETE FROM payment_entity";
-        var creditSQL = "DELETE FROM credit_request_entity";
-        var orderSQL = "DELETE FROM order_entity";
-        var runner = new QueryRunner();
-
-        try (
-                var conn = DriverManager.getConnection(
-                        "jdbc:mysql://localhost:3306/app", "app", "pass"
-                );
-        ) {
-            runner.execute(conn, paymentSQL, new ScalarHandler<>());
-            runner.execute(conn, creditSQL, new ScalarHandler<>());
-            runner.execute(conn, orderSQL, new ScalarHandler<>());
+    private static Connection getConnection() {
+        try {
+            connect = DriverManager.getConnection(URL, USERNAME, PASSWORD);
+        } catch (SQLException sqlException) {
+            sqlException.printStackTrace();
         }
+        return connect;
     }
 
-    @SneakyThrows
     public static String getPaymentStatus() {
-        var statusSQL = "SELECT status FROM payment_entity";
         var runner = new QueryRunner();
-        String paymentStatus;
+        var payStatus = "SELECT status FROM payment_entity";
 
-        try (
-                var conn = DriverManager.getConnection(
-                        "jdbc:mysql://localhost:3306/app", "app", "pass"
-                );
-        ) {
-            var status = runner.query(conn, statusSQL, new ScalarHandler<>());
-            paymentStatus = (String) status;
+        try (var connect = getConnection()) {
+            var paymentStatus = runner.query(connect, payStatus, new BeanHandler<>(PaymentRequest.class));
+            return paymentStatus.getStatus();
+        } catch (SQLException sqlException) {
+            sqlException.printStackTrace();
         }
-        return paymentStatus;
+        return null;
     }
 }
