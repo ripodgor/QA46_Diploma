@@ -40,6 +40,8 @@ public class CreditTest {
         buyOnCreditPage.sendFilledForm(info);
         buyOnCreditPage.successfulPayment();
         assertEquals("APPROVED", DbUtils.getPaymentStatus());
+        assertEquals("APPROVED", DbUtils.getPaymentAmount());
+        assertEquals("APPROVED", DbUtils.getCreditStatus());
     }
 
     @Test
@@ -49,6 +51,8 @@ public class CreditTest {
         buyOnCreditPage.sendFilledForm(info);
         buyOnCreditPage.declinedPayment();
         assertEquals("DECLINED", DbUtils.getPaymentStatus());
+        assertEquals("DECLINED", DbUtils.getPaymentAmount());
+        assertEquals("DECLINED", DbUtils.getCreditStatus());
     }
 
     // Негативные сценарии
