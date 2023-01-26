@@ -21,4 +21,4 @@ install:
 
 build_script:
   - sleep 20
-  - ./gradlew test -Dselenide.headless=true --info
+  - ./gradlew test -Dselenide.headless=true -Ddb.url=jdbc:postgresql://localhost:5432/app --info

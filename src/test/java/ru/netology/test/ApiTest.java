@@ -55,4 +55,37 @@ public class ApiTest {
         var info = new DataGenerator.Info(getCardNumberFromZeroes(), getValidMonth(), getValidYear(), getValidOwner(), getValidCvc());
         ApiUtils.getStatusCodeOfUnknownCards(info);
     }
+
+    @Test
+    void shouldCreditPayWithApprovedSuccessfully() {
+        var info = new DataGenerator.Info(getApprovedCardNumber(), getValidMonth(), getValidYear(), getValidOwner(), getValidCvc());
+        assertEquals("APPROVED", ApiUtils.getStatusOfGivenCards(info));
+        assertEquals("APPROVED", DbUtils.getPaymentStatus());
+    }
+
+    @Test
+    void shouldCreditPayWithApprovedAndCvvZeroesSuccessfully() {
+        var info = new DataGenerator.Info(getApprovedCardNumber(), getValidMonth(), getValidYear(), getValidOwner(), getCvcFromZeroes());
+        assertEquals("APPROVED", ApiUtils.getStatusOfGivenCards(info));
+        assertEquals("APPROVED", DbUtils.getPaymentStatus());
+    }
+
+    @Test
+    void shouldNotCreditPayWithDeclined() {
+        var info = new DataGenerator.Info(getDeclinedCardNumber(), getValidMonth(), getValidYear(), getValidOwner(), getValidCvc());
+        assertEquals("DECLINED", ApiUtils.getStatusOfGivenCards(info));
+        assertEquals("DECLINED", DbUtils.getPaymentStatus());
+    }
+
+    @Test
+    void shouldNotCreditPayWithUnknownCardNumber() {
+        var info = new DataGenerator.Info(getUnknownCardNumber(), getValidMonth(), getValidYear(), getValidOwner(), getValidCvc());
+        ApiUtils.getStatusCodeOfUnknownCards(info);
+    }
+
+    @Test
+    void shouldNotCreditPayWithCardNumberFromZeroes() {
+        var info = new DataGenerator.Info(getCardNumberFromZeroes(), getValidMonth(), getValidYear(), getValidOwner(), getValidCvc());
+        ApiUtils.getStatusCodeOfUnknownCards(info);
+    }
 }

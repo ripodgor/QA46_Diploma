@@ -41,4 +41,26 @@ public class ApiUtils {
                 .then()
                 .statusCode(400); // промежуточная проверка
     }
+
+    @SneakyThrows
+    public static String getStatusOfGivenCardsCredit(DataGenerator.Info info) {
+        RequestSpecification request = given();
+        request.spec(requestSpec)// указываем, какую спецификацию используем
+                .body(info)  // передаём в теле объект, который будет преобразован в JSON
+                .then()
+                .statusCode(200); // промежуточная проверка
+        var response = request.post("/api/v1/credit");
+        return response.path("status");
+    }
+
+    @SneakyThrows
+    public static void getStatusCodeOfUnknownCardsCredit(DataGenerator.Info info) {
+        given()
+                .spec(requestSpec)// указываем, какую спецификацию используем
+                .body(info)  // передаём в теле объект, который будет преобразован в JSON
+                .when()
+                .post("/api/v1/credit")
+                .then()
+                .statusCode(400); // промежуточная проверка
+    }
 }
