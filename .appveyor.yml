@@ -21,4 +21,4 @@ install:
 
 build_script:
   - sleep 20
-  - .\gradlew clean test
+  - ./gradlew clean test
