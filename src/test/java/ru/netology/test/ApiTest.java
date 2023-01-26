@@ -61,6 +61,8 @@ public class ApiTest {
         var info = new DataGenerator.Info(getApprovedCardNumber(), getValidMonth(), getValidYear(), getValidOwner(), getValidCvc());
         assertEquals("APPROVED", ApiUtils.getStatusOfGivenCardsCredit(info));
         assertEquals("APPROVED", DbUtils.getPaymentStatus());
+        assertEquals("APPROVED", DbUtils.getPaymentAmount());
+        assertEquals("APPROVED", DbUtils.getCreditStatus());
     }
 
     @Test
@@ -68,6 +70,8 @@ public class ApiTest {
         var info = new DataGenerator.Info(getApprovedCardNumber(), getValidMonth(), getValidYear(), getValidOwner(), getCvcFromZeroes());
         assertEquals("APPROVED", ApiUtils.getStatusOfGivenCardsCredit(info));
         assertEquals("APPROVED", DbUtils.getPaymentStatus());
+        assertEquals("APPROVED", DbUtils.getPaymentAmount());
+        assertEquals("APPROVED", DbUtils.getCreditStatus());
     }
 
     @Test
@@ -75,6 +79,8 @@ public class ApiTest {
         var info = new DataGenerator.Info(getDeclinedCardNumber(), getValidMonth(), getValidYear(), getValidOwner(), getValidCvc());
         assertEquals("DECLINED", ApiUtils.getStatusOfGivenCardsCredit(info));
         assertEquals("DECLINED", DbUtils.getPaymentStatus());
+        assertEquals("APPROVED", DbUtils.getPaymentAmount());
+        assertEquals("APPROVED", DbUtils.getCreditStatus());
     }
 
     @Test
