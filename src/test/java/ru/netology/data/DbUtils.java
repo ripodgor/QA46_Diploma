@@ -36,6 +36,7 @@ public class DbUtils {
         }
         return null;
     }
+
     public static String getPaymentAmount() {
         var runner = new QueryRunner();
         var payAmount = "SELECT amount FROM payment_entity";
