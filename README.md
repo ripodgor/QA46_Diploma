@@ -45,9 +45,9 @@
 ## Запуск автотестов
 
 1. Для запуска автотестов с "MySQL",  необходимо открыть новую вкладку терминала и ввести следующую команду:
- * `./gradlew test -Dselenide.headless=true Ddb.url=jdbc:mysql://localhost:3306/app --info`
+ * `./gradlew test "-Dselenide.headless=true Ddb.url=jdbc:mysql://localhost:3306/app" --info`
 2. Для запуска автотестов с "PostgreSQL",  необходимо открыть новую вкладку терминала и ввести следующую команду:
- * `./gradlew test -Dselenide.headless=true -Ddb.url=jdbc:postgresql://localhost:5432/app --info`
+ * `./gradlew test "-Dselenide.headless=true -Ddb.url=jdbc:postgresql://localhost:5432/app" --info`
 ## Запуск отчета тестирования
 
 1. Для запуска и просмотра отчета по результатам тестирования, с помощью "Allure", выполнить по очереди команды:
